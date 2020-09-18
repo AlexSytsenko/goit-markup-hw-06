@@ -64,6 +64,17 @@ img {
   padding-bottom: 94px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*Main nav*/
 
 .header {
@@ -242,6 +253,18 @@ img {
 
 /*Features*/
 
+/*Спрятанный заголовок*/
+.features-main-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-top: 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .features-item {
   width: calc((100% - 30px * 3) / 4);
 }
@@ -283,7 +306,7 @@ img {
   background-image: url(../images/svg/astronaut.svg);
 }
 
-.features-titel {
+.features-title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -302,11 +325,11 @@ img {
 /*our job*/
 
 .job {
+  padding-top: 0;
   text-align: center;
-  padding-bottom: 94px;
 }
 
-.job-titel {
+.job-title {
   margin-top: 0;
   margin-bottom: 50px;
   padding-top: 0;
@@ -616,10 +639,147 @@ img {
 .modal-button-close {
   width: 30px;
   height: 30px;
+  margin-left: auto;
   padding: 6px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--white);
+  transition: var(--time) var(--time-function);
+}
+
+.modal-button-close:hover {
+  fill: var(--accent-link-color);
+  transform: scale(1.1);
+}
+
+.modal-title {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-top: 2px;
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--text-color-black);
+}
+
+.form-modal {
+  width: 448px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-modal-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-modal-lable {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--text-color-gray);
+}
+
+.form-modal-input {
+  width: 100%;
+  height: 40px;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: var(--time) var(--time-function);
+}
+
+.form-modal-input:focus {
+  outline: transparent;
+  border: 1px solid var(--accent-link-color);
+}
+
+.form-modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+  transition: var(--time) var(--time-function);
+}
+
+.form-modal-input:focus + .form-modal-icon {
+  fill: var(--accent-link-color);
+}
+
+.form-modal-comment {
+  resize: none;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: var(--time) var(--time-function);
+}
+
+.form-modal-comment::placeholder {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-modal-comment:focus {
+  outline: transparent;
+  border: 1px solid var(--accent-link-color);
+}
+
+/*Checkbox*/
+
+.form-modal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  padding-left: 12px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--text-color-black);
+  border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-radius: 2px;
+  border-color: var(--accent-link-color);
+  background-color: var(--accent-link-color);
+  background-image: url(../images/svg/icon-check.svg);
+  background-origin: border-box;
+}
+
+.checkbox-text {
+  line-height: 1.71px;
+}
+
+.checkbox-link {
+  line-height: 1.71;
+  text-decoration-line: underline;
+  color: var(--accent-link-color);
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*Portfolio*/
@@ -728,3 +888,5 @@ img {
 }
 
 /*свг для конверта fill="var(--color1, #757575)"*/
+
+/*fill="var(--color1, #fff)" stroke="var(--color1, #fff)" stroke-width=".267" */

@@ -46,21 +46,22 @@
       <!--Features-->
       <section class="section features">
         <div class="container">
+          <h2 class="features-main-title visually-hidden">Наши преимущества</h2>
           <ul class="features-list flexbox">
             <li class="features-item attention">
-              <h2 class="features-titel">Внимание к деталям</h2>
+              <h3 class="features-title">Внимание к деталям</h3>
               <p class="features-text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
             </li>
             <li class="features-item punctuality">
-              <h2 class="features-titel">Пунктуальность</h2>
+              <h3 class="features-title">Пунктуальность</h3>
               <p class="features-text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
             </li>
             <li class="features-item planning">
-              <h2 class="features-titel">Планирование</h2>
+              <h3 class="features-title">Планирование</h3>
               <p class="features-text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
             </li>
             <li class="features-item technology">
-              <h2 class="features-titel">Современные технологии</h2>
+              <h3 class="features-title">Современные технологии</h3>
               <p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
             </li>
           </ul>
@@ -69,7 +70,7 @@
       <!--Our Job-->
       <section class="section job">
         <div class="container">
-          <h2 class="job-titel">Чем мы занимаемся</h2>
+          <h2 class="job-title">Чем мы занимаемся</h2>
           <ul class="job-list flexbox">
             <li class="job-item">
               <img src="./images/img1.jpg" alt="Человек, который работает за ноутбуком" width="370" />
@@ -331,13 +332,62 @@
         </div>
       </div>
     </footer>
+    <!--Backdrop-->
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal flexbox">
+      <div class="modal">
         <button type="button" class="modal-button-close flexbox" data-modal-close>
           <svg class="icon-close" width="18" height="18">
             <use href="./images/svg/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <!--Form-->
+        <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+        <form action="" method="post" class="form-modal">
+          <ul class="form-modal-list">
+            <li class="form-modal-item">
+              <span class="form-modal-lable">Имя</span>
+              <label class="form-modal-field">
+                <input type="text" name="name" class="form-modal-input" autocomplete="on" placeholder=" " />
+                <svg class="form-modal-icon" width="18" height="18">
+                  <use href="./images/svg/symbol-defs.svg#icon-person-form"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="form-modal-item">
+              <span class="form-modal-lable">Телефон</span>
+              <label class="form-modal-field">
+                <input type="tel" name="tel" class="form-modal-input" autocomplete="on" />
+                <svg class="form-modal-icon" width="18" height="18">
+                  <use href="./images/svg/symbol-defs.svg#icon-phone-form"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="form-modal-item">
+              <span class="form-modal-lable">Почта</span>
+              <label class="form-modal-field">
+                <input type="email" name="email" class="form-modal-input" autocomplete="on" />
+                <svg class="form-modal-icon" width="18" height="18">
+                  <use href="./images/svg/symbol-defs.svg#icon-email-form"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="form-modal-item">
+              <span class="form-modal-lable">Комментарий</span>
+              <label class="form-modal-field">
+                <textarea name="comment" rows="7" placeholder="Введите текст" class="form-modal-comment"></textarea>
+              </label>
+            </li>
+          </ul>
+          <label class="form-modal-checkbox">
+            <input type="checkbox" name="checkbox" class="checkbox visually-hidden" checked />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">
+              Соглашаюсь с рассылкой и принимаю
+              <a href="./" class="checkbox-link">Условия договора</a>
+            </span>
+          </label>
+          <button type="submit" class="hero-button modal-button">Отрпавить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
