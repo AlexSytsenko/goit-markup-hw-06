@@ -231,6 +231,7 @@ img {
 
 .hero-button {
   margin-top: 0;
+  padding: 0;
   min-width: 200px;
   height: 50px;
   border: transparent;
@@ -564,6 +565,7 @@ img {
 }
 
 .join-title {
+  display: block;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: bold;
@@ -574,8 +576,8 @@ img {
 }
 
 .join-contacts {
+  margin-right: 30px;
   padding-top: 60px;
-  padding-bottom: 100px;
   width: calc((100% - 30px * 3) / 4);
 }
 
@@ -594,6 +596,57 @@ img {
 .social-icon-link:hover,
 .social-icon-link:focus {
   background-color: var(--accent-link-color);
+}
+
+/*Footer-form*/
+
+.container-submit {
+  width: calc((100% - 30px) / 2);
+  padding-top: 60px;
+}
+
+.submit-form {
+  display: flex;
+  align-items: center;
+}
+
+.submit-form-field {
+  margin: 0;
+  padding: 0;
+}
+
+.submit-form-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 15px 16px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.submit-form-input::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  /* identical to box height, or 125% */
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button-text {
+  margin-right: 10px;
 }
 
 /*Backdrop*/
