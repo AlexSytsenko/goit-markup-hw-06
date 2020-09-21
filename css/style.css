@@ -519,17 +519,21 @@ img {
 
 /*Footer*/
 .footer {
-  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
   background: #2f303a;
 }
 
-.footer-contacts {
+.footer-wraper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
+}
+
+.footer-contacts {
   width: calc((100% - 30px * 3) / 4);
-  margin-right: 30px;
 }
 
 .logo-down {
@@ -576,8 +580,6 @@ img {
 }
 
 .join-contacts {
-  margin-right: 30px;
-  padding-top: 60px;
   width: calc((100% - 30px * 3) / 4);
 }
 
@@ -602,7 +604,6 @@ img {
 
 .container-submit {
   width: calc((100% - 30px) / 2);
-  padding-top: 60px;
 }
 
 .submit-form {
